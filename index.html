@@ -5,12 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toastyst</title>
 
-  <!-- AdSense verification meta tag -->
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8742433630487194"
      crossorigin="anonymous"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .spaghetti { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
 </head>
-<body>
-  <h1>Toastyst</h1>
-  <p>Main site: <a href="/SpaghettiStories/">Spaghetti Stories</a></p>
+<body class="bg-[#0a0a0a] text-[#e5e5e5]">
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="border-b border-white/10">
+      <div class="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center">
+            <span class="text-xl">🍝</span>
+          </div>
+          <div>
+            <div class="font-semibold text-xl tracking-tight">Toastyst</div>
+            <div class="text-xs text-white/50 -mt-0.5">Milford, Ohio</div>
+          </div>
+        </div>
+        <a href="/SpaghettiStories/" 
+           class="px-4 py-2 text-sm rounded-lg border border-white/20 hover:bg-white/5 transition-colors">
+          Enter Spaghetti Stories
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="flex-1 flex items-center justify-center px-6">
+      <div class="max-w-2xl text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-xs tracking-[2px] mb-6">
+          AGENT REPORTS • DAILY AI NEWS • SPAGHETTI CODE
+        </div>
+
+        <h1 class="text-6xl font-semibold tracking-tighter mb-4">
+          Spaghetti Stories
+        </h1>
+        <p class="text-2xl text-white/70 mb-8">
+          Daily AI agent reports, experiments, and unhinged technical notes.
+        </p>
+
+        <a href="/SpaghettiStories/" 
+           class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white text-black font-medium text-lg hover:bg-white/90 active:scale-[0.985] transition-all">
+          Read the latest reports
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <div class="mt-6 text-xs text-white/40">
+          Updated daily • Powered by local agents + Grok
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer / Secondary -->
+    <footer class="border-t border-white/10 py-8">
+      <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-y-4 text-sm text-white/50">
+        <div>
+          Also running: 
+          <a href="https://toastyst.github.io/mock-the-crown/" class="hover:text-white underline underline-offset-4">Mock the Crown</a>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://github.com/Toastyst/SpaghettiStories" class="hover:text-white">GitHub</a>
+          <a href="/SpaghettiStories/feed.xml" class="hover:text-white">RSS</a>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
