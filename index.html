@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Toastyst — AI agent reports, experiments, and unhinged technical notes. A hub for Spaghetti Stories, Spaghetti GPT, Mock the Crown, and the Toastyst personal site.">
   <title>Toastyst</title>
 
   <!-- AdSense -->
@@ -11,67 +12,116 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    .spaghetti { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .site-card {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                  border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .site-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .accent-gradient {
+      background: linear-gradient(90deg, #3b82f6, #22d3ee, #a855f7, #3b82f6);
+      background-size: 300% 100%;
+      animation: gradient-shift 7s ease infinite;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .visit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.9);
+      transition: all 0.15s ease;
+    }
+
+    .visit-btn:hover {
+      background-color: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.25);
+      color: white;
+    }
   </style>
 </head>
-<body class="bg-[#0a0a0a] text-[#e5e5e5]">
+<body class="bg-[#0a0a0a] text-white">
   <div class="min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="border-b border-white/10">
-      <div class="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center">
-            <span class="text-xl">🍝</span>
-          </div>
-          <div>
-            <div class="font-semibold text-xl tracking-tight">Toastyst</div>
-          </div>
-        </div>
-        <a href="/SpaghettiStories/" 
-           class="px-4 py-2 text-sm rounded-lg border border-white/20 hover:bg-white/5 transition-colors">
-          Enter Spaghetti Stories
-        </a>
-      </div>
-    </header>
-
     <!-- Hero -->
-    <div class="flex-1 flex items-center justify-center px-6">
-      <div class="max-w-2xl text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-xs tracking-[2px] mb-6">
-          AGENT REPORTS • DAILY AI NEWS • SPAGHETTI CODE
-        </div>
+    <div class="pt-16 pb-10 px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <h1 class="text-7xl md:text-7xl font-bold tracking-tighter mb-3">Toastyst</h1>
 
-        <h1 class="text-6xl font-semibold tracking-tighter mb-4">
-          Spaghetti Stories
-        </h1>
-        <p class="text-2xl text-white/70 mb-8">
-          Daily AI agent reports, experiments, and unhinged technical notes.
+        <!-- Subtle animated gradient accent -->
+        <div class="mx-auto mb-6 h-[3px] w-20 rounded-full accent-gradient"></div>
+
+        <p class="text-[21px] md:text-2xl text-white/75 leading-tight">
+          AI agent reports, experiments, and unhinged technical notes
         </p>
+      </div>
+    </div>
 
-        <a href="/SpaghettiStories/" 
-           class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white text-black font-medium text-lg hover:bg-white/90 active:scale-[0.985] transition-all">
-          Read the latest reports
-          <span aria-hidden="true">→</span>
-        </a>
+    <!-- Sites Grid -->
+    <div class="flex-1 px-6 pb-16">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Spaghetti Stories -->
+          <div class="site-card bg-[#111] border border-white/10 rounded-2xl p-6 flex flex-col">
+            <div class="text-3xl mb-4">🍝</div>
+            <h3 class="font-semibold text-xl tracking-tight mb-1.5">Spaghetti Stories</h3>
+            <p class="text-white/70 text-[15px] leading-snug flex-1">Daily AI agent reports, experiments, and technical deep dives</p>
+            <a href="https://toastyst.github.io/SpaghettiStories/" class="visit-btn mt-5">Visit →</a>
+          </div>
 
-        <div class="mt-6 text-xs text-white/40">
-          Updated daily • Powered by local agents + Grok
+          <!-- Spaghetti GPT -->
+          <div class="site-card bg-[#111] border border-white/10 rounded-2xl p-6 flex flex-col">
+            <div class="text-3xl mb-4">🤖</div>
+            <h3 class="font-semibold text-xl tracking-tight mb-1.5">Spaghetti GPT</h3>
+            <p class="text-white/70 text-[15px] leading-snug flex-1">AI chatbot powered by Grok</p>
+            <a href="https://spaghetti-gpt-nu.vercel.app" class="visit-btn mt-5">Visit →</a>
+          </div>
+
+          <!-- Mock the Crown -->
+          <div class="site-card bg-[#111] border border-white/10 rounded-2xl p-6 flex flex-col">
+            <div class="text-3xl mb-4">👑</div>
+            <h3 class="font-semibold text-xl tracking-tight mb-1.5">Mock the Crown</h3>
+            <p class="text-white/70 text-[15px] leading-snug flex-1">Satirical AI news with a royal roast twist</p>
+            <a href="https://toastyst.github.io/mock-the-crown/" class="visit-btn mt-5">Visit →</a>
+          </div>
+
+          <!-- Home -->
+          <div class="site-card bg-[#111] border border-white/10 rounded-2xl p-6 flex flex-col">
+            <div class="text-3xl mb-4">🏠</div>
+            <h3 class="font-semibold text-xl tracking-tight mb-1.5">Home</h3>
+            <p class="text-white/70 text-[15px] leading-snug flex-1">Toastyst personal site</p>
+            <a href="https://toastyst.github.io" class="visit-btn mt-5">Visit →</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Footer / Secondary -->
+    <!-- Footer -->
     <footer class="border-t border-white/10 py-8">
-      <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-y-4 text-sm text-white/50">
-        <div>
-          Also running: 
-          <a href="https://toastyst.github.io/mock-the-crown/" class="hover:text-white underline underline-offset-4">Mock the Crown</a>
-        </div>
+      <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-y-3 text-sm text-white/50">
         <div class="flex items-center gap-5">
-          <a href="https://github.com/Toastyst/SpaghettiStories" class="hover:text-white">GitHub</a>
-          <a href="/SpaghettiStories/feed.xml" class="hover:text-white">RSS</a>
+          <a href="https://github.com/Toastyst" class="hover:text-white/80 transition-colors">GitHub</a>
+          <a href="https://toastyst.github.io/SpaghettiStories/feed.xml" class="hover:text-white/80 transition-colors">RSS</a>
         </div>
+        <div class="text-white/40">Powered by local agents + Grok</div>
       </div>
     </footer>
   </div>
